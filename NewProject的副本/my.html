@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+	Description:
+
+	BLE example application that demonstrates how to read values
+	from the TI SensorTag.
+
+	Requirements:
+
+	See text in the app user interface.
+-->
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,
+		shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<title>My SensorTag</title>
+
+	<style>
+		@import 'ui/css/evothings-app.css';
+	</style>
+
+	<script>
+	// Redirect console.log to Evothings Workbench.
+	if (window.hyper && window.hyper.log) { console.log = hyper.log }
+	</script>
+
+	<script src="cordova.js"></script>
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="libs/evothings/evothings.js"></script>
+	<script src="libs/evothings/ui/ui.js"></script>
+	<script src="libs/evothings/easyble/easyble.js"></script>
+	<script src="app.js"></script>
+	<style>
+		p.title{
+			margin-left: 10px;
+		}
+		p.detail{
+			margin-left: 15px;
+		}
+	</style>
+</head>
+
+<body ontouchstart=""><!-- ontouchstart="" enables low-delay CSS transitions. -->
+
+
+	<h1>At-home ankle rehabilitation system</h1>
+
+	<p id="info">Fail to init</p>
+
+	<button onclick="my.onStartButton()" class="green">START</button>
+	<button onclick="my.onStopButton()" class="red">STOP</button>
+	<button onclick="my.onTestButton()" class="blue">TEST</button>
+<!-- 
+
+	<p>Movement</p>
+	<canvas id="1" width="300" height="150"></canvas>
+
+	<canvas id="2" width="300" height="150"></canvas>
+ -->
+	<!-- <p>Barometer</p> -->
+	<!-- <canvas id="canvas" width="300" height="150"></canvas> -->
+
+	<!-- <font id = "b" color="blue">blue</font></br> -->
+	<!-- <font id = "r" color="red">red</font></br>  -->
+	<!-- <font id = "g" color="green">green</font></br> --> 
+	<p>Is the elevation effective?</p>
+	<p id = "t3">NO</p>
+	<div id = "heartDevice">
+		<h3>Heart Device</h3>
+		<p class = "title">Device Address:</p>
+		<p id = "hAdd" class = "detail">Null</p>
+		<p class = "title">Is Connect:</p>
+		<p id = "hIC" class = "detail"> Null</p>
+		<!-- <p class = "title">Status:</p>
+		<p id = "hS" class = "detail"> Null</p> -->
+	</div>
+	<div id = "ankleDevice">
+		<h2>Ankle Device</h2>
+		<p class = "title">Device Address:</p>
+		<p id = "aAdd" class = "detail"> Null</p>
+		<p class = "title">Is Connect:</p>
+		<p id = "aIC" class = "detail"> Null</p>
+		<!-- <p class = "title">Status:</p>
+		<p id = "aS" class = "detail"> Null</p> -->
+	</div>
+	<p>max</p>
+	<p id = "t1"></p>
+	<p>min</p>
+	<p id = "t2"></p>
+
+	
+
+
+</body>
+
+</html>
